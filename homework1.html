@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>学生信息</h1>
+    </header>
+    <fieldset style="width: 450px;">
+        <legend>学生档案</legend>
+        <form id="testform" method="get" action="#S">
+            姓名:
+            <br/>
+            <input type="text" name="name1" required placeholder="请输入姓名" style="margin-top: 10px; margin-bottom: 10px;" /><span>*</span>
+            <br/> 学号:
+            <br/>
+            <input type="text" name="no1" required placeholder="请输入学号" style="margin-top: 10px; margin-bottom: 10px;" /><span>*</span>
+            <br/> 手机号码:
+            <br/>
+            <input type="tel" name="no2" required placeholder="请输入手机号" style="margin-top: 10px; margin-bottom: 10px;" /><span>*</span>
+            <br/>邮箱地址:
+            <br/>
+            <input type="email" name="email1" required placeholder="请输入邮箱地址" style="margin-top: 10px; margin-bottom: 10px;" /><span>*</span>
+            <br/> 录取学校:
+            <br/>
+            <input type="search" name="school1" list="school2" style="margin-top: 10px; margin-bottom: 10px;">
+            <br/>
+            <datalist id="school2">
+                <option>清华大学</option>
+                <option>北京大学</option>
+                <option>河北师范大学</option>
+            </datalist> 入学成绩:
+            <br/>
+            <input type="text" name="grade" style="margin-top: 10px; margin-bottom: 10px;">
+            <br/> 入学时间:
+            <br/>
+            <input type="date" name="date1" style="margin-top: 10px; margin-bottom: 10px;">
+            <br/>
+            <input type="submit" value="提交" style="margin-top: 10px; margin-bottom: 10px;" />
+        </form>
+
+    </fieldset>
+</body>
+<script>
+    var input = document.getElementsByTagName("input");
+    var legend = document.getElementsByTagName("legend");
+    var span = document.getElementsByTagName("span");
+    for (var i = 0; i < input.length; i++) {
+        input[i].style.width = "420px";
+    }
+    legend[0].style.color = "red";
+    for (var i = 0; i < span.length; i++) {
+        span[i].style.color = "red";
+    }
+</script>
+
+</html>
